@@ -5,8 +5,8 @@ import logging
 
 import uvicorn
 from fastapi import FastAPI
-from api import ping
 
+from app.api import ping
 
 log = logging.getLogger(__name__)
 
