@@ -25,4 +25,4 @@ COPY . .
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 
 # # Run application
-#RUN python3 app/main.py
+# RUN python3 app/main.py

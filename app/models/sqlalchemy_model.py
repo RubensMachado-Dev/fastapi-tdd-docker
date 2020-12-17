@@ -1,6 +1,7 @@
 # project/app/models/tortoise.py
 import datetime
 
+from pydantic_sqlalchemy import sqlalchemy_to_pydantic
 from sqlalchemy import Column, String, DateTime, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -19,7 +20,4 @@ class TextSummary(Base):
         return self.url
 
 
-if __name__ == "__main__":
-    print("File two executed when ran directly")
-else:
-    print("File two executed when imported")
+SummarySchema = sqlalchemy_to_pydantic(TextSummary)
