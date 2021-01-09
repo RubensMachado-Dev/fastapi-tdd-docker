@@ -62,10 +62,10 @@ jobs:
             -e DATABASE_TEST_URL=sqlite://sqlite.db \
             -p 5003:8765 \
             ${{ env.IMAGE }}:latest
-      - name: Pytest
-        run: docker exec fastapi-tdd python -m pytest .
-      - name: Flake8
-        run: docker exec fastapi-tdd python -m flake8 .
+#      - name: Pytest
+#        run: docker exec fastapi-tdd python -m pytest .
+#      - name: Flake8
+#        run: docker exec fastapi-tdd python -m flake8 .
       - name: Black
         run: docker exec fastapi-tdd python -m black . --check
       - name: isort
