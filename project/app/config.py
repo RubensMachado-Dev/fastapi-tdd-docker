@@ -20,7 +20,7 @@ class Settings(BaseSettings):
         # keep_untouched = (cached_property,)
 
 
-@lru_cache(maxsize=1)
+#@lru_cache(maxsize=1)
 def get_settings() -> BaseSettings:
     log.warning("Loading config settings from the environment...")
     return Settings()

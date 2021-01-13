@@ -18,6 +18,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV ENVIRONMENT prod
 ENV TESTING 0
+ENV DATABASE_URL "postgres://postgres:postgres@localhost:5432/web_dev"
 
 
 # install system dependencies
