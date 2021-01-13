@@ -8,16 +8,18 @@ from app.config import settings
 from app.models.sqlalchemy_model import Base
 
 log = logging.getLogger(__name__)  # new
+#
+# SQLALCHEMY_DATABASE_URL = settings.database_url
 
-SQLALCHEMY_DATABASE_URL = settings.database_url
 
-if SQLALCHEMY_DATABASE_URL == "sqlite:///./sql_app.db":
+# engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
 
-    engine = create_engine(
-        SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-    )
-else:
-    engine = create_engine(SQLALCHEMY_DATABASE_URL)
+SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+# SQLALCHEMY_DATABASE_URL = "postgresql://user:password@postgresserver/db"
+
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
