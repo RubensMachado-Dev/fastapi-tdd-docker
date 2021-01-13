@@ -4,8 +4,8 @@
     <list default="true" id="77696158-8d74-482e-aac0-68aaaa41f7c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/Dockerfile.prod" beforeDir="false" afterPath="$PROJECT_DIR$/project/Dockerfile.prod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project" />
+    </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml.web: Compose Deployment">
     <configuration name="docker-compose.yml.web: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">

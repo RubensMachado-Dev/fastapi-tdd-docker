@@ -3,6 +3,7 @@
 # from sqlalchemy.orm import sessionmaker
 import logging
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import BaseSettings
 
@@ -15,12 +16,12 @@ class Settings(BaseSettings):
     database_url: str
 
     class Config:
-        env_file = "../../.env"
+        env_file = Path(__file__).parent.parent / ".env"
         # env_file_encoding = 'utf-8'
         # keep_untouched = (cached_property,)
 
 
-#@lru_cache(maxsize=1)
+@lru_cache(maxsize=1)
 def get_settings() -> BaseSettings:
     log.warning("Loading config settings from the environment...")
     return Settings()
