@@ -42,13 +42,11 @@ def test_app_with_db():
             db.close()
 
     # if os.environ.get("DATABASE_TEST_URL"):
-    SQLALCHEMY_DATABASE_URL = os.environ.get("DATABASE_TEST_URL")
+    #     SQLALCHEMY_DATABASE_URL = os.environ.get("DATABASE_TEST_URL")
     # else:
     #     SQLALCHEMY_DATABASE_URL = "postgres://postgres:postgres@localhost:5432/web_test"
-
-    engine = create_engine(
-        SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-    )
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+    engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
 
     testing_session_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     Base.metadata.create_all(bind=engine)
