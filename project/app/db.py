@@ -4,7 +4,7 @@ from typing import Generator
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.config import settings
+# from app.config import settings
 from app.models.sqlalchemy_model import Base
 
 log = logging.getLogger(__name__)  # new
